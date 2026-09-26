@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NetKazanç Hesaplama Yöntemi ve 2026 Kaynakları</title>
+  <meta name="description" content="NetKazanç maaş, vergi ve mesai hesaplarında kullanılan 2026 parametrelerini, formülleri, varsayımları ve resmî kaynakları incele.">
+  <link rel="canonical" href="https://yasin765418.github.io/netkazanc-destek/hesaplama-yontemi/">
+  <meta name="theme-color" content="#285e4d"><link rel="icon" href="../assets/images/app-icon.png"><link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="site-header"><nav class="nav wrap" aria-label="Ana menü"><a class="brand" href="../"><img src="../assets/images/app-icon.png" alt="" width="40" height="40">NetKazanç</a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menü</button><div class="nav-links" id="nav-links"><a href="../#nasil-calisir">Nasıl çalışır?</a><a href="../#hesaplama-araclari">Hesaplama araçları</a><a href="../destek/">Destek</a></div></nav></header>
+  <main id="icerik">
+    <header class="page-hero wrap"><nav class="breadcrumbs" aria-label="İçerik yolu"><a href="../">NetKazanç</a><span>›</span><span>Hesaplama yöntemi</span></nav><p class="eyebrow">Şeffaf hesaplama</p><h1>Formüller, varsayımlar ve kaynaklar</h1><p class="lead">Bir sonuca nasıl ulaştığımızı ve hangi 2026 parametrelerini kullandığımızı açıkça görebilirsin.</p></header>
+    <article class="article wrap">
+      <h2>2026 vergi parametreleri</h2>
+      <div class="table-wrap"><table><thead><tr><th>Parametre</th><th>Değer</th></tr></thead><tbody><tr><td>Ücret matrahı eşikleri</td><td>190.000 / 400.000 / 1.500.000 / 5.300.000 TL</td></tr><tr><td>Gelir vergisi oranları</td><td>%15 / %20 / %27 / %35 / %40</td></tr><tr><td>Brüt asgari ücret</td><td>33.030 TL</td></tr><tr><td>Prime esas kazanç tavanı</td><td>297.270 TL</td></tr><tr><td>SGK çalışan payı</td><td>%14</td></tr><tr><td>İşsizlik sigortası çalışan payı</td><td>%1</td></tr><tr><td>Damga vergisi oranı</td><td>Binde 7,59</td></tr></tbody></table></div>
+
+      <h2>Brüt maaştan net maaşa</h2>
+      <p>Önce SGK ve işsizlik sigortası çalışan payları hesaplanır. Bu kesintilerden sonra kalan bölüm, o ayın gelir vergisi matrahını oluşturur.</p>
+      <p class="mono">Vergi matrahı = Brüt ücret − SGK çalışan payı − İşsizlik sigortası</p>
+      <p>Gelir vergisi, önceki kümülatif matrahla birlikte artan oranlı tarifeden hesaplanır. Asgari ücrete karşılık gelen gelir vergisi istisnası düşülür. Damga vergisinde de asgari ücret tutarı istisna edilir.</p>
+
+      <h2>Saatlik ve günlük ücret</h2>
+      <p>NetKazanç, aylık maaşı otomatik olarak 30’a bölmez. Seçtiğin çalışma günlerinin ilgili takvim ayında kaç kez bulunduğunu sayar.</p>
+      <p class="mono">Günlük ücret = Aylık maaş ÷ O ayın gerçek çalışma günü</p>
+      <p class="mono">Saatlik ücret = Günlük ücret ÷ Günlük net çalışma saati</p>
+      <p>Günlük net çalışma saatine yemek ve çay molaları dahil edilmemelidir.</p>
+
+      <h2>Mesai ücreti</h2>
+      <p class="mono">Mesai tutarı = Saatlik ücret × Mesai süresi × Kullanıcı katsayısı</p>
+      <p>Normal gün ve hafta tatili katsayıları ayrı tutulur. Böylece işyerinde normal mesai 1×, hafta tatili 2× ise iki kural birbirinden bağımsız uygulanır.</p>
+
+      <h2>Sınırlar</h2>
+      <p>Hesaplamalar standart özel sektör 4/a çalışanı için kişisel tahmin sağlar. Engellilik indirimi, emekli çalışan durumu, teşvikler, ayni yardımlar, primler, ikramiyeler, eksik gün, özel istisnalar ve işyerine özgü bordro işlemleri sonucu değiştirebilir.</p>
+      <p>NetKazanç hukuk, mali müşavirlik veya resmî bordro hizmeti değildir. Bir hak talebi veya uyuşmazlıkta bordro uzmanından destek alınmalıdır.</p>
+
+      <div class="source-box"><h3>Resmî kaynaklar</h3><ul><li><a href="https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv%2Fyardim-kaynaklar%2Fyararli-bilgiler%2Fgelir-vergisi-tarifeleri%2Fgelir-vergisi-tarifesi-2026.pdf" rel="external">Gelir İdaresi Başkanlığı — 2026 gelir vergisi tarifesi</a></li><li><a href="https://www.csgb.gov.tr/poco-pages/asgari-ucret/" rel="external">Çalışma ve Sosyal Güvenlik Bakanlığı — asgari ücret</a></li><li><a href="https://www.sgk.gov.tr/Content/Post/2e0c9e1a-2cfe-4456-af10-49d3de0c58ba/Prime-Esas-Kazanc-Miktarlari-2026-01-14-10-35-39" rel="external">Sosyal Güvenlik Kurumu — 2026 prime esas kazanç sınırları</a></li></ul><p class="fine">Kural sürümü: 2026.1 · Son doğrulama: 26 Eylül 2026</p></div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="wrap"><div class="footer-grid"><div><a class="brand" href="../">NetKazanç</a></div><div><h3>Hesaplama</h3><a href="../maas-hesaplama-2026/">Maaş hesaplama</a><a href="../fazla-mesai-ucreti-hesaplama/">Mesai hesaplama</a></div><div><h3>Bilgi</h3><a href="../privacy/">Gizlilik</a><a href="../destek/">Destek</a></div></div><p class="footer-note">© <span data-year>2026</span> NetKazanç.</p></div></footer>
+  <script src="../assets/site.js" defer></script>
+</body></html>

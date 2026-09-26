@@ -3,23 +3,154 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>NetKazanç Destek</title>
-  <meta name="description" content="NetKazanç destek, gizlilik ve hesap silme bilgileri.">
-  <style>
-    :root{color-scheme:light;--ink:#202e2c;--green:#285e4d;--paper:#f6f7f3;--line:#d7ddd8;--muted:#5d6b67}
-    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    main{width:min(720px,calc(100% - 40px));margin:0 auto;padding:72px 0 88px}header{border-bottom:1px solid var(--line);padding-bottom:32px;margin-bottom:40px}
-    .mark{display:grid;place-items:center;width:48px;height:48px;background:var(--green);color:var(--paper);font-weight:800;font-size:24px;margin-bottom:24px}
-    h1{font-size:clamp(34px,7vw,56px);line-height:1.05;letter-spacing:-.04em;margin:0 0 14px}h2{font-size:22px;margin:38px 0 10px}p,li{max-width:66ch}p{margin:0 0 14px}.muted{color:var(--muted)}
-    nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}a{color:var(--green);font-weight:650;text-underline-offset:3px}.button{border:1px solid var(--green);padding:10px 14px;text-decoration:none}
-    footer{border-top:1px solid var(--line);margin-top:48px;padding-top:24px;color:var(--muted)}
-  </style>
+  <title>NetKazanç — Maaş, Mesai ve Vergi Dilimi Takibi</title>
+  <meta name="description" content="NetKazanç ile gerçek çalışma günlerine göre saatlik ücretini, mesai kazancını, vergi dilimini ve maaş ödeme takvimini takip et.">
+  <link rel="canonical" href="https://yasin765418.github.io/netkazanc-destek/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:title" content="NetKazanç — Bu ay hesabına ne kadar yatacak?">
+  <meta property="og:description" content="Maaşını, mesaini, vergi dilimini ve ödeme günlerini kendi çalışma düzenine göre takip et.">
+  <meta property="og:url" content="https://yasin765418.github.io/netkazanc-destek/">
+  <meta property="og:image" content="https://yasin765418.github.io/netkazanc-destek/assets/images/app-icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#285e4d">
+  <link rel="icon" href="assets/images/app-icon.png">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "NetKazanç",
+    "description": "Türkiye'deki özel sektör çalışanları için maaş, mesai, vergi dilimi ve ödeme takibi uygulaması.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "iOS, Android",
+    "inLanguage": "tr",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "TRY"},
+    "author": {"@type": "Person", "name": "Yasin Yiğit"},
+    "image": "https://yasin765418.github.io/netkazanc-destek/assets/images/app-icon.png",
+    "url": "https://yasin765418.github.io/netkazanc-destek/"
+  }
+  </script>
 </head>
-<body><main>
-  <header><div class="mark" aria-hidden="true">N</div><h1>NetKazanç destek</h1><p class="muted">Türkiye'deki özel sektör çalışanları için kişisel maaş ve mesai tahmini.</p>
-    <nav><a class="button" href="privacy/">Gizlilik politikası</a><a class="button" href="delete-account/">Hesabı silme</a></nav>
+<body>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Ana menü">
+      <a class="brand" href="./"><img src="assets/images/app-icon.png" alt="" width="40" height="40">NetKazanç</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menü</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#nasil-calisir">Nasıl çalışır?</a>
+        <a href="#hesaplama-araclari">Hesaplama araçları</a>
+        <a href="#guvenlik">Gizlilik</a>
+        <a href="destek/">Destek</a>
+      </div>
+    </nav>
   </header>
-  <h2>Uygulama hakkında</h2><p>NetKazanç; çalışma günlerini, net çalışma süresini, maaş ödeme düzenini ve mesaileri kullanarak tahmini ödeme tutarlarını gösterir. Hesaplamalar bilgilendirme amaçlıdır ve resmî bordro yerine geçmez.</p>
-  <h2>Destek</h2><p>Bir hata bildirirken maaş tutarı, e-posta, şifre veya bordro gibi kişisel bilgilerini paylaşma. Teknik sorunu kişisel veri içermeden <a href="https://github.com/yasin765418/netkazanc-destek/issues/new">destek formuna</a> yazabilirsin.</p>
-  <footer>Son güncelleme: 25 Eylül 2026</footer>
-</main></body></html>
+
+  <main id="icerik">
+    <section class="hero">
+      <div class="hero-grid wrap">
+        <div>
+          <p class="eyebrow">Türkiye’de özel sektör çalışanları için</p>
+          <h1>Bu ay hesabına ne kadar yatacak?</h1>
+          <p class="lead">NetKazanç; gerçek çalışma günlerine, işyerindeki mesai katsayısına, vergi dilimine ve ödeme planına göre tahmini kazancını gösterir.</p>
+          <div class="actions">
+            <a class="button primary" href="#hesaplama-araclari">Ücretsiz hesapla</a>
+            <a class="button muted" href="#uygulama" data-store-pending aria-disabled="true">App Store’da yakında</a>
+          </div>
+          <div class="trust-row" aria-label="Öne çıkan özellikler">
+            <span>Ücretsiz</span><span>Reklamsız</span><span>Türkiye’ye özel</span><span>Verilerin sana ait</span>
+          </div>
+        </div>
+        <div class="phone-stage" aria-label="NetKazanç uygulama görünümü">
+          <div class="pay-slip"><small>BU AY ÖDENECEK</small><strong class="mono">65.439,56 TL</strong><span>Mesailer dahil tahmini net ödeme</span></div>
+          <div class="phone"><img src="assets/images/ozet.png" alt="NetKazanç aylık maaş ve mesai özeti ekranı" width="1284" height="2778"></div>
+          <div class="pay-days"><span>SIRADAKİ ÖDEME</span><b>5 Ekim</b><span>Saat 13.00 bildirimi</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="nasil-calisir">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Hesap makinesinden fazlası</p><h2>İşyerinin düzenine uyum sağlar.</h2></div>
+          <p class="lead">Ayı 30’a bölmek yerine o ayın gerçek çalışma günlerini, günlük net çalışma süreni ve seçtiğin mesai katsayılarını kullanır.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature emphasis"><span class="index">01 / TAKVİM</span><h3>Gerçek çalışma günleri</h3><p>Haftada beş ya da altı gün çalışmana göre ayın gerçek iş günü sayısını bulur.</p></article>
+          <article class="feature"><span class="index">02 / MESAİ</span><h3>Sana özel katsayılar</h3><p>Normal gün ve hafta tatili mesaisini işyerindeki 1×, 1,5× veya 2× düzenine göre hesaplar.</p></article>
+          <article class="feature"><span class="index">03 / VERGİ</span><h3>Yıl içinde değişen net maaş</h3><p>Brüt maaştaki SGK, işsizlik, gelir ve damga vergisi kesintilerini aylık matrahla birlikte gösterir.</p></article>
+          <article class="feature"><span class="index">04 / ÖDEME</span><h3>Bir veya iki maaş günü</h3><p>Maaşın tek günde ya da iki parça yatıyorsa ödeme günlerini ve dağılımı ayrı ayrı takip eder.</p></article>
+          <article class="feature"><span class="index">05 / KESİM</span><h3>Mesai kesim dönemleri</h3><p>Ayın 1–15’i ile 16–ayın sonu gibi dönemleri farklı ödeme günlerine bağlar.</p></article>
+          <article class="feature"><span class="index">06 / HATIRLATMA</span><h3>Ödeme günü bildirimi</h3><p>Maaş gününde Türkiye saatiyle 13.00’te beklenen ödeme tutarını cihazında hatırlatır.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="uygulama">
+      <div class="story wrap">
+        <div class="screen-stack" aria-hidden="true">
+          <img src="assets/images/mesailer.png" alt="" width="1284" height="2778" loading="lazy">
+          <img src="assets/images/odemeler.png" alt="" width="1284" height="2778" loading="lazy">
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">Bir kez ayarla, ay boyunca takip et</p>
+          <h2>Maaş düzenin senden başka kimseye benzemez.</h2>
+          <p class="lead">NetKazanç standart bir bordro varsayımını dayatmaz. Çalışma günlerini, izin gününü, günlük net süreni, maaş günlerini ve mesai dönemlerini sen belirlersin.</p>
+          <ol class="story-list">
+            <li><b>1</b><span>Maaş ve çalışma düzenini tanımla.</span></li>
+            <li><b>2</b><span>Ay içinde yaptığın mesaileri ekle.</span></li>
+            <li><b>3</b><span>Beklenen ödeme ile hesabına yatan tutarı karşılaştır.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="hesaplama-araclari">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Ücretsiz web araçları</p><h2>Hesabını indirmeden de kontrol et.</h2></div>
+          <p>2026 vergi parametreleriyle çalışan araçlar bilgi amaçlıdır. Sonucu daha sonra takip etmek için NetKazanç uygulamasına geçebilirsin.</p>
+        </div>
+        <div class="tool-grid">
+          <a class="tool-card" href="maas-hesaplama-2026/"><span>12 aylık görünüm</span><b>2026 maaş hesaplama</b><i>Hesapla →</i></a>
+          <a class="tool-card" href="brutten-nete-maas-hesaplama/"><span>Kesintileri ayrı ayrı gör</span><b>Brütten nete maaş</b><i>Hesapla →</i></a>
+          <a class="tool-card" href="fazla-mesai-ucreti-hesaplama/"><span>Gerçek çalışma gününe göre</span><b>Fazla mesai ücreti</b><i>Hesapla →</i></a>
+          <a class="tool-card" href="vergi-dilimi-hesaplama/"><span>Kümülatif matrahla hesapla</span><b>Vergi dilimi</b><i>Hesapla →</i></a>
+          <a class="tool-card" href="hafta-tatili-mesai-hesaplama/"><span>Pazar veya seçtiğin izin günü</span><b>Hafta tatili mesaisi</b><i>Hesapla →</i></a>
+          <a class="tool-card" href="hesaplama-yontemi/"><span>Formüller ve resmî kaynaklar</span><b>Nasıl hesaplıyoruz?</b><i>İncele →</i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="guvenlik">
+      <div class="security wrap">
+        <div><p class="eyebrow">Kişisel finans verisi</p><h2>Hesabın yalnızca sana görünür.</h2><p class="lead">Maaş bilgisi hassastır. Bu nedenle kullanıcı kayıtları hesap kimliğiyle ayrılır; uygulama reklam ve davranış takibi kullanmaz.</p></div>
+        <div class="security-panel">
+          <h3>Veri yaklaşımı</h3>
+          <p>Hesap ve uygulama verileri Supabase’in Frankfurt bölgesinde saklanır. Her kullanıcı yalnızca kendi maaş, mesai ve ödeme kayıtlarına erişebilir.</p>
+          <dl>
+            <div><dt>Reklam</dt><dd>Yok</dd></div>
+            <div><dt>Konum takibi</dt><dd>Yok</dd></div>
+            <div><dt>Bildirim</dt><dd>Cihaz üzerinde</dd></div>
+            <div><dt>Hesap silme</dt><dd>Uygulama içinde</dd></div>
+          </dl>
+          <a class="button" href="privacy/" style="color:white;border-color:#789188;margin-top:22px">Gizlilik politikasını oku</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div><a class="brand" href="./"><img src="assets/images/app-icon.png" alt="" width="40" height="40">NetKazanç</a><p class="fine" style="margin-top:14px">Maaş ve mesai tahminlerini çalışma düzenine göre takip et.</p></div>
+        <div><h3>Hesaplama</h3><a href="maas-hesaplama-2026/">Maaş hesaplama</a><a href="fazla-mesai-ucreti-hesaplama/">Mesai hesaplama</a><a href="vergi-dilimi-hesaplama/">Vergi dilimi</a></div>
+        <div><h3>NetKazanç</h3><a href="destek/">Destek</a><a href="privacy/">Gizlilik</a><a href="delete-account/">Hesap silme</a></div>
+      </div>
+      <p class="footer-note">© <span data-year>2026</span> NetKazanç · Hesaplamalar bilgilendirme amaçlıdır ve resmî bordro yerine geçmez.</p>
+    </div>
+  </footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

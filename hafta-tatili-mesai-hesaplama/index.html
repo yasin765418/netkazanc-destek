@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hafta Tatili Mesai Ücreti Hesaplama | NetKazanç</title>
+  <meta name="description" content="Pazar veya seçtiğin hafta tatili gününde çalışmanın tahmini karşılığını, aylık gerçek çalışma günü ve işyeri mesai katsayısıyla hesapla.">
+  <link rel="canonical" href="https://yasin765418.github.io/netkazanc-destek/hafta-tatili-mesai-hesaplama/">
+  <meta property="og:title" content="Hafta tatili mesai hesaplama"><meta property="og:description" content="İzin gününde çalışmanın tahmini ücretini hesapla."><meta property="og:type" content="website">
+  <meta name="theme-color" content="#285e4d"><link rel="icon" href="../assets/images/app-icon.png"><link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="site-header"><nav class="nav wrap" aria-label="Ana menü"><a class="brand" href="../"><img src="../assets/images/app-icon.png" alt="" width="40" height="40">NetKazanç</a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menü</button><div class="nav-links" id="nav-links"><a href="../#nasil-calisir">Nasıl çalışır?</a><a href="../#hesaplama-araclari">Hesaplama araçları</a><a href="../destek/">Destek</a></div></nav></header>
+  <main id="icerik">
+    <header class="page-hero wrap"><nav class="breadcrumbs" aria-label="İçerik yolu"><a href="../">NetKazanç</a><span>›</span><span>Hafta tatili mesaisi</span></nav><p class="eyebrow">Pazar veya seçtiğin izin günü</p><h1>Hafta tatili mesai hesaplama</h1><p class="lead">Normalde çalışmadığın hafta tatili gününde yaptığın çalışmanın işyerindeki katsayıya göre tahmini karşılığını gör.</p></header>
+    <section class="wrap calculator-layout">
+      <form class="calculator" data-calc="rest-day">
+        <h2 style="font-size:30px">Maaş ve çalışma bilgileri</h2>
+        <div class="fields">
+          <div class="field"><label for="netSalary">Aylık net maaş (TL)</label><input id="netSalary" inputmode="decimal" value="60000"></div>
+          <div class="field"><label for="workMonth">Çalışılan ay</label><input id="workMonth" type="month" value="2026-09"></div>
+          <div class="field"><label for="dailyHours">Günlük net çalışma süresi</label><input id="dailyHours" inputmode="decimal" value="7"></div>
+          <div class="field"><label for="overtimeHours">Hafta tatilinde çalışılan süre</label><input id="overtimeHours" inputmode="decimal" value="7"></div>
+          <div class="field"><label for="factor">Hafta tatili katsayısı</label><input id="factor" inputmode="decimal" value="2"><small>İşyerin günlük ücretin iki katını veriyorsa 2 yaz.</small></div>
+          <fieldset class="field full"><legend>Normal çalışma günleri</legend><div class="check-row"><label><input type="checkbox" name="workday" value="1" checked><span>Pzt</span></label><label><input type="checkbox" name="workday" value="2" checked><span>Sal</span></label><label><input type="checkbox" name="workday" value="3" checked><span>Çar</span></label><label><input type="checkbox" name="workday" value="4" checked><span>Per</span></label><label><input type="checkbox" name="workday" value="5" checked><span>Cum</span></label><label><input type="checkbox" name="workday" value="6" checked><span>Cmt</span></label><label><input type="checkbox" name="workday" value="7"><span>Paz</span></label></div></fieldset>
+        </div>
+        <button class="calc-action" type="submit">Hafta tatili ücretini hesapla</button>
+      </form>
+      <aside class="result-card" aria-live="polite"><span class="result-label">Maaşa eklenecek tahmini tutar</span><output class="result-main" id="overtimeValue">—</output><dl class="result-list"><div><dt>Normal çalışma günü</dt><dd id="workdays">—</dd></div><div><dt>Günlük ücret</dt><dd id="dailyValue">—</dd></div><div><dt>Saatlik ücret</dt><dd id="hourly">—</dd></div></dl></aside>
+    </section>
+    <section class="wrap article"><h2>Hafta tatili hangi gündür?</h2><p>Bu araçta hafta tatili yalnızca pazar olarak kabul edilmez. Normal çalışma günlerini sen seçersin; seçmediğin gün veya günler hafta tatilini temsil eder.</p><h2>Örnek hesap</h2><p>Günlük ücretin 1.000 TL, hafta tatili katsayın 2 ve o gün tam süre çalıştıysan tahmini ek ödeme 2.000 TL olur. Kısmi çalışmada süre saatlik ücret üzerinden orantılanır.</p><div class="source-box"><h3>İşyeri uygulamanı doğrula</h3><p>Sözleşme, toplu iş sözleşmesi ve bordro uygulamaları farklı olabilir. Uygulamadaki katsayı alanına işyerinde gerçekten kullanılan değeri gir.</p></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap"><div class="footer-grid"><div><a class="brand" href="../">NetKazanç</a></div><div><h3>Diğer araçlar</h3><a href="../fazla-mesai-ucreti-hesaplama/">Fazla mesai</a><a href="../maas-hesaplama-2026/">Maaş hesaplama</a></div><div><h3>Bilgi</h3><a href="../hesaplama-yontemi/">Yöntem</a><a href="../destek/">Destek</a></div></div><p class="footer-note">© <span data-year>2026</span> NetKazanç.</p></div></footer>
+  <script src="../assets/site.js" defer></script><script src="../assets/calculators.js" defer></script>
+</body></html>

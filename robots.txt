@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yasin765418.github.io/netkazanc-destek/sitemap.xml
